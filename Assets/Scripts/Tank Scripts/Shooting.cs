@@ -10,7 +10,7 @@ public class Shooting : MonoBehaviour
     Transform bulletSpawn;
 
     float nextFire;
-    float fireRate = 1;
+    float fireRate = 0.3f;
 
     void Update()
     {
@@ -29,7 +29,7 @@ public class Shooting : MonoBehaviour
             bulletSpawn.position,
             bulletSpawn.rotation);
 
-        //bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 6;
+        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 6;
 
        
     }

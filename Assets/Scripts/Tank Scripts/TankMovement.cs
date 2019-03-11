@@ -8,6 +8,11 @@ public class TankMovement : MonoBehaviour
     private float rotationSpeed;
     private bool goingForward;
 
+    public TankMovement()
+    {
+
+    }
+
     private void Start()
     {
         movementSpeed = 5f;

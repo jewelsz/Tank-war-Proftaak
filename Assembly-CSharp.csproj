@@ -60,6 +60,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Enums\ShotType.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\IChatService.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\IGameService.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\IHighscoreService.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\ILobbyService.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\IUserService.cs" />
+    <Compile Include="Assets\Scripts\Models\Highscore.cs" />
+    <Compile Include="Assets\Scripts\Models\Lobby.cs" />
+    <Compile Include="Assets\Scripts\Models\User.cs" />
     <Compile Include="Assets\Scripts\Tank Scripts\CanonRotation.cs" />
     <Compile Include="Assets\Scripts\Tank Scripts\Shooting.cs" />
     <Compile Include="Assets\Scripts\Tank Scripts\TankMovement.cs" />
