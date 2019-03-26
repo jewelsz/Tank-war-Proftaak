@@ -5,9 +5,11 @@ using UnityEngine;
 public class Shooting : MonoBehaviour
 {
     [SerializeField]
-    GameObject bullet;
+    GameObject bulletPrefab;
     [SerializeField]
     Transform bulletSpawn;
+
+    GameObject bullet;
 
     float nextFire;
     float fireRate = 0.3f;
@@ -25,12 +27,9 @@ public class Shooting : MonoBehaviour
     {
 
         bullet = Instantiate(
-            bullet,
+            bulletPrefab,
             bulletSpawn.position,
             bulletSpawn.rotation);
 
-        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 6;
-
-       
     }
 }

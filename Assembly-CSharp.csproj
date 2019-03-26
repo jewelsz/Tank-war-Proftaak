@@ -60,8 +60,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Bullet Scripts\BulletScript.cs" />
     <Compile Include="Assets\Scripts\Enums\Scenes.cs" />
     <Compile Include="Assets\Scripts\Enums\ShotType.cs" />
+    <Compile Include="Assets\Scripts\Game Scripts\Game.cs" />
+    <Compile Include="Assets\Scripts\Game Scripts\SpawnPoint.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IChatService.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IGameService.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IHighscoreService.cs" />
@@ -71,6 +74,7 @@
     <Compile Include="Assets\Scripts\Models\Lobby.cs" />
     <Compile Include="Assets\Scripts\Models\User.cs" />
     <Compile Include="Assets\Scripts\Scene Handler\SceneHandler.cs" />
+    <Compile Include="Assets\Scripts\Tank Scripts\BulletCollision.cs" />
     <Compile Include="Assets\Scripts\Tank Scripts\CanonRotation.cs" />
     <Compile Include="Assets\Scripts\Tank Scripts\Shooting.cs" />
     <Compile Include="Assets\Scripts\Tank Scripts\TankMovement.cs" />
