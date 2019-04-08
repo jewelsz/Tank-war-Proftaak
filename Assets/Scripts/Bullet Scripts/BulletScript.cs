@@ -7,8 +7,8 @@ public class BulletScript : MonoBehaviour
     private float bulletSpeed = 6f;
     [SerializeField] Rigidbody rb;
 
-    public Transform originalObject;
-    public Transform reflectedObject;
+    //public Transform originalObject;
+    //public Transform reflectedObject;
 
     private void Start()
     {

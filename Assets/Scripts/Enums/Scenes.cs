@@ -10,6 +10,7 @@ namespace Assets.Scripts.Enums
     {
         LOGIN,
         LOBBY,
-        GAME
+        GAME,
+        REGISTER
     }
 }

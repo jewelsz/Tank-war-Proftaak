@@ -255,6 +255,7 @@ GameObject:
   - component: {fileID: 45136006}
   - component: {fileID: 45136005}
   - component: {fileID: 45136009}
+  - component: {fileID: 45136010}
   m_Layer: 5
   m_Name: MainCanvas
   m_TagString: Untagged
@@ -355,10 +356,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e652d6e4c75551e4dbb730e725c736b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scene: {fileID: 45136010}
   usernameText: {fileID: 1734134684}
   emailText: {fileID: 768069806}
   passwordText: {fileID: 860621263}
   confirmPasswordText: {fileID: 2049722895}
+--- !u!114 &45136010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45136004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5714b9c5286123c42b547700a9e1c720, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &157996764
 GameObject:
   m_ObjectHideFlags: 0
