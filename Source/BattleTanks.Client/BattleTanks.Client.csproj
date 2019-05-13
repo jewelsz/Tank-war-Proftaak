@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -13,6 +13,9 @@
     <ProjectReference Include="..\BattleTanks.Messages\BattleTanks.Messages.csproj" />
     <ProjectReference Include="..\BattleTanks.Networking\BattleTanks.Networking.csproj" />
     <ProjectReference Include="..\BattleTanks.Utilities\BattleTanks.Utilities.csproj" />
+    <Reference Include="UnityEngine">
+      <HintPath>C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

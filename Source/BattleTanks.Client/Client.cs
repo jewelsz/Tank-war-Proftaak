@@ -6,9 +6,71 @@ using BattleTanks.Networking;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace BattleTanks.Client
 {
+    //https://github.com/jamesjlinden/unity-decompiled/blob/master/UnityEngine.Networking/NetworkTransform.cs
+    //https://github.com/jamesjlinden/unity-decompiled/blob/master/UnityEngine.Networking/NetworkBehaviour.cs
+    public class TransformUpdateSender : MonoBehaviour
+    {
+        [SerializeField]
+        private float sendInterval = 0.1f;
+        private float lastSentTime;
+        private Vector3 lastSentPosition;
+        private Quaternion lastSentRotation;
+
+        private void Start()
+        {
+            lastSentTime = Time.time;
+            lastSentPosition = transform.position;
+            lastSentRotation = transform.rotation;
+        }
+
+        private void FixedUpdate()
+        {
+            //Process update
+        }
+
+        private void Update()
+        {
+            if (IsConnectedToServer() && HasMoved() && HasPassedSendInterval())
+                SendTransform();
+
+            bool IsConnectedToServer() => throw new NotImplementedException(); // TODO: Check if connected
+            bool HasPassedSendInterval() => lastSentTime - Time.time > sendInterval;
+            bool HasMoved()
+            {
+                bool hasMoved = false;
+
+                if ((transform.position - lastSentPosition).magnitude > 9.99999974737875E-06)
+                    hasMoved = true;
+                else if (Quaternion.Angle(transform.rotation, lastSentRotation) > 9.99999974737875E-06)
+                    hasMoved = true;
+
+                return hasMoved;
+            }
+        }
+
+        private void SendTransform()
+        {
+
+        }
+    }
+    public class TransformUpdateReceiver : MonoBehaviour
+    {
+        private void FixedUpdate()
+        {
+            //Process update
+            //Interpolate
+        }
+
+        public void ReceiveUpdate()
+        {
+            //Update transform
+        }
+    }
+
     public class Client
     {
         private const int Port = 9999;
