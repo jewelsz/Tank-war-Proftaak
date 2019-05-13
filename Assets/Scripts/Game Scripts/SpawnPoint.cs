@@ -15,7 +15,6 @@ public class SpawnPoint : MonoBehaviour
     //Respawn na 3 seconde
     public void Respawn()
     {
-        Debug.Log("Respawn Triggered");
         player.SetActive(false);
         StartCoroutine(WaitForRespawn());
     }

@@ -8,7 +8,6 @@ public class SceneHandler : MonoBehaviour
 {
     public void ChangeScene(Scenes scene)
     {
-        Debug.Log("scene change!!!!");
         switch (scene)
         {
             case Scenes.LOGIN:

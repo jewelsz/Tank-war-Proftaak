@@ -15,7 +15,7 @@ public class LoginUIController : MonoBehaviour
         //doe inlog checkie
 
         //Klopt, change naar lobby
-        scene.ChangeScene(Scenes.GAME);
+        scene.ChangeScene(Scenes.LOBBY);
 
         //Fail
         //failMessageBox.SetActive(true);
