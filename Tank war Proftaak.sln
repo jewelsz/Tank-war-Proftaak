@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.352
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{EFF096AD-19D8-B9E2-8A8E-E0D90CE6E54B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BattleTanks.Client", "Source\BattleTanks.Client\BattleTanks.Client.csproj", "{54CF5264-4CC7-45CF-8E25-D753AA213230}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BattleTanks.Messages", "Source\BattleTanks.Messages\BattleTanks.Messages.csproj", "{A7C0A1A5-FCB3-432F-8C87-9B72A28AC55A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BattleTanks.MessageSerializer", "Source\BattleTanks.MessageSerializer\BattleTanks.MessageSerializer.csproj", "{09C1BA0E-C019-4C6F-AEB5-1D3AE3A61D90}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BattleTanks.Networking", "Source\BattleTanks.Networking\BattleTanks.Networking.csproj", "{3257B9E7-4120-4AB3-B1D6-5A9C14CF4937}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BattleTanks.Utilities", "Source\BattleTanks.Utilities\BattleTanks.Utilities.csproj", "{7A174276-E0BF-4687-A72F-6E9DB8380D45}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EFF096AD-19D8-B9E2-8A8E-E0D90CE6E54B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFF096AD-19D8-B9E2-8A8E-E0D90CE6E54B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFF096AD-19D8-B9E2-8A8E-E0D90CE6E54B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFF096AD-19D8-B9E2-8A8E-E0D90CE6E54B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54CF5264-4CC7-45CF-8E25-D753AA213230}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54CF5264-4CC7-45CF-8E25-D753AA213230}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54CF5264-4CC7-45CF-8E25-D753AA213230}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54CF5264-4CC7-45CF-8E25-D753AA213230}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7C0A1A5-FCB3-432F-8C87-9B72A28AC55A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7C0A1A5-FCB3-432F-8C87-9B72A28AC55A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7C0A1A5-FCB3-432F-8C87-9B72A28AC55A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7C0A1A5-FCB3-432F-8C87-9B72A28AC55A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09C1BA0E-C019-4C6F-AEB5-1D3AE3A61D90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09C1BA0E-C019-4C6F-AEB5-1D3AE3A61D90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09C1BA0E-C019-4C6F-AEB5-1D3AE3A61D90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09C1BA0E-C019-4C6F-AEB5-1D3AE3A61D90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3257B9E7-4120-4AB3-B1D6-5A9C14CF4937}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3257B9E7-4120-4AB3-B1D6-5A9C14CF4937}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3257B9E7-4120-4AB3-B1D6-5A9C14CF4937}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3257B9E7-4120-4AB3-B1D6-5A9C14CF4937}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A174276-E0BF-4687-A72F-6E9DB8380D45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A174276-E0BF-4687-A72F-6E9DB8380D45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A174276-E0BF-4687-A72F-6E9DB8380D45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A174276-E0BF-4687-A72F-6E9DB8380D45}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8AB25EAD-927A-43BA-BAC0-70B2CED2E7B2}
+	EndGlobalSection
+EndGlobal
