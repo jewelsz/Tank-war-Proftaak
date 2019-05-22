@@ -1,0 +1,2 @@
+-r:MessagePack.dll
+-r:System.IO.Pipelines.dll

@@ -10,11 +10,7 @@
   
   <ItemGroup>
     <PackageReference Include="System.IO.Pipelines" Version="4.5.3" />
-    <PackageReference Include="System.Memory" Version="4.5.2" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\BattleTanks.Messages\BattleTanks.Messages.csproj" />
+    <PackageReference Include="System.Memory" Version="4.5.3" />
   </ItemGroup>
 
 </Project>
