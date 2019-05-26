@@ -1,0 +1,74 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.1",
+    "signature": "67902d8451a8777992d6e9f2fed4d86e12e0c061"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.1": {
+      "TankWarMultiplayerServer/1.0.0": {
+        "dependencies": {
+          "KingNetwork.Server": "1.0.0",
+          "KingNetwork.Shared": "1.0.0",
+          "TankWarMultiplayerShared": "1.0.0.0"
+        },
+        "runtime": {
+          "TankWarMultiplayerServer.dll": {}
+        }
+      },
+      "KingNetwork.Server/1.0.0": {
+        "dependencies": {
+          "KingNetwork.Shared": "1.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/KingNetwork.Server.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "KingNetwork.Shared/1.0.0": {
+        "runtime": {
+          "lib/netstandard2.0/KingNetwork.Shared.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "TankWarMultiplayerShared/1.0.0.0": {
+        "runtime": {
+          "TankWarMultiplayerShared.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TankWarMultiplayerServer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KingNetwork.Server/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fBHpMW0OSZFgy02ZhpqcNuAB6BeceUBxIwdb9tCBsvfdjDvScjgKmaWb4g9/fZqIr3RnKEeK7oXet6ojlXkPkg==",
+      "path": "kingnetwork.server/1.0.0",
+      "hashPath": "kingnetwork.server.1.0.0.nupkg.sha512"
+    },
+    "KingNetwork.Shared/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-T2QzjQIgUzL4lJAor/qbupAbwzDbErXx4gUUTXxhu0Oqx0zcUzK1ELlFV3FLXpn1FPskFfyQsnC9IxivvSwnmg==",
+      "path": "kingnetwork.shared/1.0.0",
+      "hashPath": "kingnetwork.shared.1.0.0.nupkg.sha512"
+    },
+    "TankWarMultiplayerShared/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
