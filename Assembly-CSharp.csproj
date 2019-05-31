@@ -82,13 +82,13 @@
     <Compile Include="Assets\Scripts\Tank Scripts\Shooting.cs" />
     <Compile Include="Assets\Scripts\Tank Scripts\TankMovement.cs" />
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/Manny/source/repos/Unity/Tank-war-Proftaak/Tank-war-Proftaak/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/Manny/source/repos/Unity/Tank-war-Proftaak/Tank-war-Proftaak/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Users/Manny/source/repos/Unity/Tank-war-Proftaak/Tank-war-Proftaak/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -292,55 +292,55 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="BattleTanks.Client">
-      <HintPath>C:/Users/Manny/source/repos/Unity/Tank-war-Proftaak/Tank-war-Proftaak/Assets/Client/netstandard2.0/BattleTanks.Client.dll</HintPath>
+      <HintPath>Assets/Client/netstandard2.0/BattleTanks.Client.dll</HintPath>
     </Reference>
     <Reference Include="BattleTanks.Domain">
-      <HintPath>C:/Users/Manny/source/repos/Unity/Tank-war-Proftaak/Tank-war-Proftaak/Assets/Client/netstandard2.0/BattleTanks.Domain.dll</HintPath>
+      <HintPath>Assets/Client/netstandard2.0/BattleTanks.Domain.dll</HintPath>
     </Reference>
     <Reference Include="BattleTanks.Messages">
-      <HintPath>C:/Users/Manny/source/repos/Unity/Tank-war-Proftaak/Tank-war-Proftaak/Assets/Client/netstandard2.0/BattleTanks.Messages.dll</HintPath>
+      <HintPath>Assets/Client/netstandard2.0/BattleTanks.Messages.dll</HintPath>
     </Reference>
     <Reference Include="BattleTanks.MessageSerializer">
-      <HintPath>C:/Users/Manny/source/repos/Unity/Tank-war-Proftaak/Tank-war-Proftaak/Assets/Client/netstandard2.0/BattleTanks.MessageSerializer.dll</HintPath>
+      <HintPath>Assets/Client/netstandard2.0/BattleTanks.MessageSerializer.dll</HintPath>
     </Reference>
     <Reference Include="BattleTanks.Networking">
-      <HintPath>C:/Users/Manny/source/repos/Unity/Tank-war-Proftaak/Tank-war-Proftaak/Assets/Client/netstandard2.0/BattleTanks.Networking.dll</HintPath>
+      <HintPath>Assets/Client/netstandard2.0/BattleTanks.Networking.dll</HintPath>
     </Reference>
     <Reference Include="BattleTanks.Networking.Interfaces">
-      <HintPath>C:/Users/Manny/source/repos/Unity/Tank-war-Proftaak/Tank-war-Proftaak/Assets/Client/netstandard2.0/BattleTanks.Networking.Interfaces.dll</HintPath>
+      <HintPath>Assets/Client/netstandard2.0/BattleTanks.Networking.Interfaces.dll</HintPath>
     </Reference>
     <Reference Include="BattleTanks.Utilities">
-      <HintPath>C:/Users/Manny/source/repos/Unity/Tank-war-Proftaak/Tank-war-Proftaak/Assets/Client/netstandard2.0/BattleTanks.Utilities.dll</HintPath>
+      <HintPath>Assets/Client/netstandard2.0/BattleTanks.Utilities.dll</HintPath>
     </Reference>
     <Reference Include="MessagePack">
-      <HintPath>C:/Users/Manny/source/repos/Unity/Tank-war-Proftaak/Tank-war-Proftaak/Assets/Client/netstandard2.0/MessagePack.dll</HintPath>
+      <HintPath>Assets/Client/netstandard2.0/MessagePack.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>C:/Users/Manny/source/repos/Unity/Tank-war-Proftaak/Tank-war-Proftaak/Assets/Client/netstandard2.0/Newtonsoft.Json.dll</HintPath>
+      <HintPath>Assets/Client/netstandard2.0/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Buffers">
-      <HintPath>C:/Users/Manny/source/repos/Unity/Tank-war-Proftaak/Tank-war-Proftaak/Assets/Client/netstandard2.0/System.Buffers.dll</HintPath>
+      <HintPath>Assets/Client/netstandard2.0/System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.IO.Pipelines">
-      <HintPath>C:/Users/Manny/source/repos/Unity/Tank-war-Proftaak/Tank-war-Proftaak/Assets/Client/netstandard2.0/System.IO.Pipelines.dll</HintPath>
+      <HintPath>Assets/Client/netstandard2.0/System.IO.Pipelines.dll</HintPath>
     </Reference>
     <Reference Include="System.Memory">
-      <HintPath>C:/Users/Manny/source/repos/Unity/Tank-war-Proftaak/Tank-war-Proftaak/Assets/Client/netstandard2.0/System.Memory.dll</HintPath>
+      <HintPath>Assets/Client/netstandard2.0/System.Memory.dll</HintPath>
     </Reference>
     <Reference Include="System.Numerics.Vectors">
-      <HintPath>C:/Users/Manny/source/repos/Unity/Tank-war-Proftaak/Tank-war-Proftaak/Assets/Client/netstandard2.0/System.Numerics.Vectors.dll</HintPath>
+      <HintPath>Assets/Client/netstandard2.0/System.Numerics.Vectors.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe">
-      <HintPath>C:/Users/Manny/source/repos/Unity/Tank-war-Proftaak/Tank-war-Proftaak/Assets/Client/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <HintPath>Assets/Client/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Tasks.Extensions">
-      <HintPath>C:/Users/Manny/source/repos/Unity/Tank-war-Proftaak/Tank-war-Proftaak/Assets/Client/netstandard2.0/System.Threading.Tasks.Extensions.dll</HintPath>
+      <HintPath>Assets/Client/netstandard2.0/System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.ValueTuple">
-      <HintPath>C:/Users/Manny/source/repos/Unity/Tank-war-Proftaak/Tank-war-Proftaak/Assets/Client/netstandard2.0/System.ValueTuple.dll</HintPath>
+      <HintPath>Assets/Client/netstandard2.0/System.ValueTuple.dll</HintPath>
     </Reference>
     <Reference Include="YamlDotNet">
-      <HintPath>C:/Users/Manny/source/repos/Unity/Tank-war-Proftaak/Tank-war-Proftaak/Assets/Client/netstandard2.0/YamlDotNet.dll</HintPath>
+      <HintPath>Assets/Client/netstandard2.0/YamlDotNet.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
