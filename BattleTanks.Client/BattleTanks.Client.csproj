@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>C:\Users\Manny\source\repos\Unity\Tank-war-Proftaak\Tank-war-Proftaak\Assets\Client\</OutputPath>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BattleTanks.MessageSerializer\BattleTanks.MessageSerializer.csproj" />
+    <ProjectReference Include="..\BattleTanks.Messages\BattleTanks.Messages.csproj" />
+  </ItemGroup>
+
+</Project>

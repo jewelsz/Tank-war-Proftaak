@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>f9e249db-4097-4714-8a2f-00b5c161841f</ProjectGuid>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MessagePack" Version="1.7.3.7" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="System.Buffers" Version="4.5.0" />
+    <PackageReference Include="System.Memory" Version="4.5.3" />
+    <PackageReference Include="YamlDotNet" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Buffers">
+      <HintPath>..\..\..\..\.nuget\packages\system.buffers\4.4.0\ref\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BattleTanks.Networking.Interfaces\BattleTanks.Networking.Interfaces.csproj" />
+    <ProjectReference Include="..\BattleTanks.Domain\BattleTanks.Domain.csproj" />
+    <ProjectReference Include="..\BattleTanks.Networking.Interfaces\BattleTanks.Networking.Interfaces.csproj" />
+    <ProjectReference Include="..\BattleTanks.Utilities\BattleTanks.Utilities.csproj" />
+  </ItemGroup>
+
+</Project>
