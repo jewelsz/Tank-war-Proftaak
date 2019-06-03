@@ -10,10 +10,14 @@ public class LoginUIController : MonoBehaviour
     [SerializeField] private SceneHandler scene;
 
 
-    public void Login()
+    public async void Login()
     {
         //doe inlog checkie
+        AuthenticationService authenticationService = new AuthenticationService();
+        string username = "Peter";
+        string password = "Jan";
 
+        await authenticationService.LoginAsync(username, password);
         //Klopt, change naar lobby
         scene.ChangeScene(Scenes.LOBBY);
 
