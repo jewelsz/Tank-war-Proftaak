@@ -3,9 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SceneHandler : MonoBehaviour
 {
+    public PlayerColor playerColor { get; set; }
+    [SerializeField] Dropdown ColorDropdown;
+
+    private void Start()
+    {
+        DontDestroyOnLoad(this);
+    }
+
     public void ChangeScene(Scenes scene)
     {
         switch (scene)
@@ -26,5 +35,10 @@ public class SceneHandler : MonoBehaviour
                 SceneManager.LoadScene("RegisterScene", LoadSceneMode.Single);
                 break;
         }
+    }
+
+    public void setPlayerColor(PlayerColor playerColor)
+    {
+        this.playerColor = playerColor;
     }
 }

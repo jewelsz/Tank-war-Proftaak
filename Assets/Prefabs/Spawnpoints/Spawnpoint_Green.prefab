@@ -43,5 +43,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c943a938a596d14f9f37249fd909641, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 100022, guid: 7052d29ca3f7cf748b460579a01d0764, type: 3}
   spawnPoint: {fileID: 9070333584675426865}

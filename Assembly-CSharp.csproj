@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Bullet Scripts\BulletScript.cs" />
+    <Compile Include="Assets\Scripts\Enums\PlayerColor.cs" />
     <Compile Include="Assets\Scripts\Enums\Scenes.cs" />
     <Compile Include="Assets\Scripts\Enums\ShotType.cs" />
     <Compile Include="Assets\Scripts\Game Scripts\Game.cs" />
@@ -79,8 +80,11 @@
     <Compile Include="Assets\Scripts\Models\User.cs" />
     <Compile Include="Assets\Scripts\Tank Scripts\BulletCollision.cs" />
     <Compile Include="Assets\Scripts\Tank Scripts\CanonRotation.cs" />
+    <Compile Include="Assets\Scripts\Tank Scripts\OpponentCanonRotation.cs" />
+    <Compile Include="Assets\Scripts\Tank Scripts\OpponentMovement.cs" />
     <Compile Include="Assets\Scripts\Tank Scripts\Shooting.cs" />
     <Compile Include="Assets\Scripts\Tank Scripts\TankMovement.cs" />
+    <Compile Include="Assets\TankManagement.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />

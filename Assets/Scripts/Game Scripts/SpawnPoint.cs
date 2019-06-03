@@ -4,32 +4,29 @@ using UnityEngine;
 
 public class SpawnPoint : MonoBehaviour
 {
-    [SerializeField] private GameObject player;
-    [SerializeField] private Transform spawnPoint;
+    [SerializeField] Transform spawnPoint;
+
+    private void Start()
+    {
+        
+    }
 
     public void Spawn()
     {
-        player.transform.position = spawnPoint.transform.position;
+        transform.position = spawnPoint.transform.position;
     }
 
     //Respawn na 3 seconde
-    public void Respawn()
+    public void Respawn(GameObject tank)
     {
-        player.SetActive(false);
-        StartCoroutine(WaitForRespawn());
+        tank.gameObject.SetActive(false);
+        StartCoroutine(WaitForRespawn(tank));
     }
 
-    public void setSpawnPoint(Transform spawn)
-    {
-        //Spawnpoint dat de speler toegewezen krijgt aan het begin van het spel
-        //Voor multiplayer. Dus random spawnpoint?
-    }
-
-
-    IEnumerator WaitForRespawn()
+    IEnumerator WaitForRespawn(GameObject tank)
     {
         yield return new WaitForSeconds(3);
-        player.SetActive(true);
-        player.transform.position = spawnPoint.transform.position;
+        tank.gameObject.SetActive(true);
+        tank.gameObject.transform.position = spawnPoint.transform.position;
     }
 }

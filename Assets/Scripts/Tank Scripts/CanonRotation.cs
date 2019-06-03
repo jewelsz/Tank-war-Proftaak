@@ -15,8 +15,6 @@ public class CanonRotation : MonoBehaviour
         Vector3 mouseDirection = new Vector3(mousePosition.x - transform.position.x ,0f,  mousePosition.z - transform.position.z);
 
         transform.forward = mouseDirection;
-        
-
     }
 
 }

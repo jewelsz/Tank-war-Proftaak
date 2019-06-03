@@ -32,4 +32,14 @@ public class Shooting : MonoBehaviour
             bulletSpawn.rotation);
 
     }
+
+    public void setBulletSpawn(Transform playerBulletSpawn)
+    {
+        bulletSpawn = playerBulletSpawn;
+    }
+
+    public void setBulletPrefab(GameObject bullet)
+    {
+        bulletPrefab = bullet;
+    }
 }

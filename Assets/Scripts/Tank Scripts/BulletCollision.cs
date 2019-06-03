@@ -5,16 +5,20 @@ using UnityEngine;
 public class BulletCollision : MonoBehaviour
 {
     int count = 0;
+    [SerializeField] SpawnPoint spawnPoint;
 
-    [SerializeField] private SpawnPoint spawnPoint;
-
-    private void OnCollisionEnter(Collision collision)
+    private void Start()
     {
-        if(collision.gameObject.CompareTag("Bullet") && !this.CompareTag("Tank"))
+    }
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        Debug.Log("Collision triggered");
+        if (collision.gameObject.CompareTag("Bullet") && this.CompareTag("Tank"))
         {
             Debug.Log("TANK HIT: " + count);
             count++;
-            spawnPoint.Respawn();
+            spawnPoint.Respawn(this.gameObject);
         }
     }
 
