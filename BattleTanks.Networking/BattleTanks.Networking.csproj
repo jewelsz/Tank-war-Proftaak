@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>8.0</LangVersion>
+    <ProjectGuid>70eb4ac3-97fb-4fec-858e-cd9fff404b50</ProjectGuid>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.IO.Pipelines" Version="4.5.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BattleTanks.Networking.Interfaces\BattleTanks.Networking.Interfaces.csproj" />
+    <ProjectReference Include="..\BattleTanks.Messages\BattleTanks.Messages.csproj" />
+    <ProjectReference Include="..\BattleTanks.Networking.Interfaces\BattleTanks.Networking.Interfaces.csproj" />
+    <ProjectReference Include="..\BattleTanks.Utilities\BattleTanks.Utilities.csproj" />
+  </ItemGroup>
+
+</Project>
