@@ -24,7 +24,7 @@ public class AuthenticationService
         MessageListener<LoginResponse> loginResponseListener = new MessageListener<LoginResponse>();
         loginResponseListener.Subscribe(_messageProcessor);
         LoginRequest loginRequest = new LoginRequest(Guid.NewGuid(), username, password);
-        _ = _networkConnector.SendMessageAsync(loginRequest, CancellationToken.None);
+        await _networkConnector.SendMessageAsync(loginRequest, CancellationToken.None);
         LoginResponse loginResponse = await loginResponseListener.ReceiveMessageAsync();
         _log.Invoke($"Success: {loginResponse.IsSuccess}, Username: {loginResponse.UserDto.Name}, RequestId: {loginResponse.RequestId}, ResponseId: {loginResponse.Id}");
         loginResponseListener.Unsubscribe();

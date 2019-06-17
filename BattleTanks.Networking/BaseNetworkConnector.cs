@@ -30,7 +30,7 @@ namespace BattleTanks.Networking
         public void Start()
         {
             if (!IsConnected)
-                throw new Exception("NetworkConnector has not connected yet. Call Start() first.");
+                throw new Exception("NetworkConnector has not connected yet. Call ConnectAsync() first.");
 
             Pipe pipe = new Pipe();
 

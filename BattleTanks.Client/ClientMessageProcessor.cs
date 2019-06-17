@@ -7,7 +7,7 @@ using BattleTanks.Utilities.Observer;
 
 namespace BattleTanks.Client
 {
-    internal class ClientMessageProcessor : IMessageProcessor
+    public class ClientMessageProcessor : IMessageProcessor
     {
         private readonly ConcurrentDictionary<Type, ObserverCollection> _observers; 
 
