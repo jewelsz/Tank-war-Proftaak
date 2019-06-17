@@ -7,24 +7,28 @@ public class TankMovement : MonoBehaviour
     private  float movementSpeed;
     private float rotationSpeed;
     private bool goingForward;
+    Vector3 tankposition;
 
     private void Start()
     {
         movementSpeed = 5f;
         rotationSpeed = 50f;
+        tankposition = transform.position;
     }
 
     private void Update()
     {
+        transform.position = Vector3.Lerp(transform.position,  tankposition, 0.05f);
         //Moving forward and backward
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
             goingForward = true;
-            transform.position += transform.forward * Time.deltaTime * movementSpeed;
+            tankposition = transform.position += transform.forward * Time.deltaTime * movementSpeed;
         }
         else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
-            transform.position -= transform.forward * Time.deltaTime * movementSpeed;
+            //transform.position -= transform.forward * Time.deltaTime * movementSpeed;
+            tankposition = transform.position -= transform.forward * Time.deltaTime * movementSpeed;
             goingForward = false;
         }
        
