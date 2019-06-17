@@ -8,9 +8,9 @@ namespace Assets.Scripts.Services
 {
     public class MonoTcpNetworkConnector : MonoBehaviour, INetworkConnector
     {
-        private readonly TcpNetworkConnector tcpNetworkConnector;
+        private TcpNetworkConnector tcpNetworkConnector;
 
-        public MonoTcpNetworkConnector()
+        public void Awake()
         {
             Debug.Log("MonoTcp");
             this.tcpNetworkConnector = PersistentClass.GetInstance().TcpNetworkConnector;

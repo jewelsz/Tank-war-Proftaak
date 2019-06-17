@@ -10,9 +10,9 @@ namespace Assets.Scripts.Services
 {
     public class MonoClientMessageProcessor : MonoBehaviour, IMessageProcessor
     {
-        private readonly ClientMessageProcessor clientMessageProcessor;
+        private ClientMessageProcessor clientMessageProcessor;
 
-        public MonoClientMessageProcessor()
+        public void Awake()
         {
             Debug.Log("MonoClient");
             this.clientMessageProcessor = PersistentClass.GetInstance().clientMessageSingleton;
