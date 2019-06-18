@@ -9,18 +9,21 @@ public class BulletCollision : MonoBehaviour
 
     private void Start()
     {
+
     }
 
     private void OnTriggerEnter(Collider collision)
     {
         Debug.Log("Collision triggered");
-        if (collision.gameObject.CompareTag("Bullet") && this.CompareTag("Tank"))
+        //bool test = collision.GetComponent<BulletScript>().delayed;
+        //Debug.Log(test);
+        if (collision.gameObject.CompareTag("Bullet"))
         {
-            Debug.Log("TANK HIT: " + count);
-            count++;
+            Destroy(collision.gameObject);
             spawnPoint.Respawn(this.gameObject);
         }
     }
+    
 
 }
 

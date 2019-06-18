@@ -56,7 +56,7 @@ public class TankManagement : MonoBehaviour
         DestroyImmediate(script, true);
         playerTank.AddComponent<TankMovement>();
         //Change tag to player
-        playerTank.gameObject.tag = "Player";
+        //playerTank.gameObject.tag = "Player";
 
         //Find canon in tank object and add rotation script
         canon = playerTank.transform.Find("Top").gameObject;

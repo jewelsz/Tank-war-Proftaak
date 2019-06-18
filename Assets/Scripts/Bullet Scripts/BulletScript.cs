@@ -7,18 +7,19 @@ public class BulletScript : MonoBehaviour
     private float bulletSpeed = 6f;
     [SerializeField] Rigidbody rb;
 
+    //public bool delayed { get; set; }
+
     private void Start()
     {
         rb.velocity = transform.forward * bulletSpeed;
+        StartCoroutine(WaitForCollision(1f));
     }
 
-    private void OnCollisionEnter(Collision collision)
+    IEnumerator WaitForCollision(float time)
     {
-        if(collision.gameObject.CompareTag("Tank") || collision.gameObject.CompareTag("Wall"))
-        {
-            Destroy(gameObject);
-        }
+        yield return new WaitForSeconds(time);
+        gameObject.GetComponent<BoxCollider>().enabled = true;
     }
-    
+   
 }
 

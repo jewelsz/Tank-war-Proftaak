@@ -83,8 +83,8 @@
     <Compile Include="Assets\Scripts\Tank Scripts\OpponentCanonRotation.cs" />
     <Compile Include="Assets\Scripts\Tank Scripts\OpponentMovement.cs" />
     <Compile Include="Assets\Scripts\Tank Scripts\Shooting.cs" />
+    <Compile Include="Assets\Scripts\Tank Scripts\TankManagement.cs" />
     <Compile Include="Assets\Scripts\Tank Scripts\TankMovement.cs" />
-    <Compile Include="Assets\TankManagement.cs" />
     <Reference Include="Unity.PackageManagerUI.Editor">
       <HintPath>D:/Dev Map/Tank war/Tank war Proftaak/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
