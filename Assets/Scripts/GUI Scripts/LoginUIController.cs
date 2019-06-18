@@ -1,9 +1,12 @@
 ﻿using Assets.Scripts.Enums;
 using Assets.Scripts.Services;
+using BattleTanks.Messages.Responses;
 using BattleTanks.Networking.Interfaces;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LoginUIController : MonoBehaviour
 {
@@ -12,16 +15,19 @@ public class LoginUIController : MonoBehaviour
     [SerializeField] private SceneHandler scene;
     [SerializeField] private MonoTcpNetworkConnector networkConnector;
     [SerializeField] private MonoClientMessageProcessor monoClientMessageProcessor;
+    [SerializeField] private InputField usernameInputField;
+    [SerializeField] private InputField passwordInputField;
+    private LoginResponse loginResponse;
 
-
-    public async void Login()
-    {
-        //doe inlog checkie
-        AuthenticationService authenticationService = new AuthenticationService(networkConnector, monoClientMessageProcessor, Debug.Log);
-        string username = "Peter";
-        string password = "Jan";
+    public void Login()
+    {       
         Debug.Log("Logging in");
-        await authenticationService.LoginAsync(username, password);
+        AuthenticationService authenticationService = new AuthenticationService(networkConnector, monoClientMessageProcessor);
+        string username = usernameInputField.text;
+        string password = passwordInputField.text;
+
+        loginResponse = authenticationService.LoginAsync(username, password).GetAwaiter().GetResult();
+        Debug.Log("Loginresponse :" + loginResponse.IsSuccess);
         //Klopt, change naar lobby
         scene.ChangeScene(Scenes.LOBBY);
 
@@ -29,7 +35,6 @@ public class LoginUIController : MonoBehaviour
         //failMessageBox.SetActive(true);
 
     }
-
     public void failMessageOk()
     {
         failMessageBox.SetActive(false);

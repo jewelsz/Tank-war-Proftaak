@@ -870,6 +870,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &561099429 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2187647169528248024, guid: 533708fad26efc4449505ab93dbaf6fd,
+    type: 3}
+  m_PrefabInstance: {fileID: 2187647170333954827}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 575553740, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &616052819
 GameObject:
   m_ObjectHideFlags: 0
@@ -1671,6 +1683,8 @@ MonoBehaviour:
   scene: {fileID: 1111575717}
   networkConnector: {fileID: 1111575718}
   monoClientMessageProcessor: {fileID: 1111575719}
+  usernameInputField: {fileID: 561099429}
+  passwordInputField: {fileID: 1036229701}
 --- !u!114 &1111575717
 MonoBehaviour:
   m_ObjectHideFlags: 0
