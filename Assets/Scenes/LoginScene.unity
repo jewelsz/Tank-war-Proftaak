@@ -1561,6 +1561,9 @@ GameObject:
   - component: {fileID: 1111575712}
   - component: {fileID: 1111575716}
   - component: {fileID: 1111575717}
+  - component: {fileID: 1111575720}
+  - component: {fileID: 1111575719}
+  - component: {fileID: 1111575718}
   m_Layer: 5
   m_Name: Master Canvas
   m_TagString: Untagged
@@ -1666,6 +1669,8 @@ MonoBehaviour:
   failMessageBox: {fileID: 656145634}
   quitMessageBox: {fileID: 717845368}
   scene: {fileID: 1111575717}
+  networkConnector: {fileID: 1111575718}
+  monoClientMessageProcessor: {fileID: 1111575719}
 --- !u!114 &1111575717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1676,6 +1681,43 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5714b9c5286123c42b547700a9e1c720, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ColorDropdown: {fileID: 0}
+--- !u!114 &1111575718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111575711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b4768866bdc1854dbd76561a90e6d37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1111575719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111575711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32c43d7aae69ebd45a05f99ff2bff54b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1111575720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111575711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5a004b8a493906419b2cb073d433427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1175093058

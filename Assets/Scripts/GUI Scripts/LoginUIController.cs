@@ -1,4 +1,6 @@
 ﻿using Assets.Scripts.Enums;
+using Assets.Scripts.Services;
+using BattleTanks.Networking.Interfaces;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,12 +10,18 @@ public class LoginUIController : MonoBehaviour
     [SerializeField] private GameObject failMessageBox;
     [SerializeField] private GameObject quitMessageBox;
     [SerializeField] private SceneHandler scene;
+    [SerializeField] private MonoTcpNetworkConnector networkConnector;
+    [SerializeField] private MonoClientMessageProcessor monoClientMessageProcessor;
 
 
-    public void Login()
+    public async void Login()
     {
         //doe inlog checkie
-
+        AuthenticationService authenticationService = new AuthenticationService(networkConnector, monoClientMessageProcessor, Debug.Log);
+        string username = "Peter";
+        string password = "Jan";
+        Debug.Log("Logging in");
+        await authenticationService.LoginAsync(username, password);
         //Klopt, change naar lobby
         scene.ChangeScene(Scenes.LOBBY);
 
@@ -51,7 +59,6 @@ public class LoginUIController : MonoBehaviour
     {
         Application.Quit();
     }
-
     public void KeepPlaying()
     {
         quitMessageBox.SetActive(false);
