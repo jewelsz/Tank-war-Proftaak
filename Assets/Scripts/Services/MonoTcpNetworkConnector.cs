@@ -8,12 +8,12 @@ namespace Assets.Scripts.Services
 {
     public class MonoTcpNetworkConnector : MonoBehaviour, INetworkConnector
     {
-        private TcpNetworkConnector tcpNetworkConnector;
+        private static MonoV2TcpNetworkConnector tcpNetworkConnector;
 
-        public void Awake()
+        public void Start()
         {
-            Debug.Log("MonoTcp");
-            this.tcpNetworkConnector = PersistentClass.GetInstance().TcpNetworkConnector;
+            Debug.Log("Awoke MonoTcpNetworkConnector");
+            tcpNetworkConnector = PersistentClass.TcpNetworkConnector;
         }
 
         public bool IsConnected => ((INetworkConnector)tcpNetworkConnector).IsConnected;

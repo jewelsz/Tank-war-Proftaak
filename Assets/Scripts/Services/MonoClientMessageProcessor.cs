@@ -10,12 +10,12 @@ namespace Assets.Scripts.Services
 {
     public class MonoClientMessageProcessor : MonoBehaviour, IMessageProcessor
     {
-        private ClientMessageProcessor clientMessageProcessor;
+        private static ClientMessageProcessor clientMessageProcessor;
 
-        public void Awake()
+        public void Start()
         {
-            Debug.Log("MonoClient");
-            this.clientMessageProcessor = PersistentClass.GetInstance().clientMessageSingleton;
+            Debug.Log("Awoke MonoClientMessageProcess");
+            clientMessageProcessor = PersistentClass.clientMessageSingleton;
         }
 
         public Task ProcessCommand(Type type, ICommand command, INetworkConnector networkConnector)

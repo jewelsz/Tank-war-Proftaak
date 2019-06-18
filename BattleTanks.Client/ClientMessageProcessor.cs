@@ -15,7 +15,10 @@ namespace BattleTanks.Client
         {
             _observers = new ConcurrentDictionary<Type, ObserverCollection>();
         }
-
+        ~ClientMessageProcessor()
+        {
+            throw new NotImplementedException();
+        }
         public IDisposable Subscribe(Type type, IObserver observer)
         {
             if (!_observers.ContainsKey(type))

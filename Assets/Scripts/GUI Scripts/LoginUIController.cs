@@ -20,7 +20,7 @@ public class LoginUIController : MonoBehaviour
         AuthenticationService authenticationService = new AuthenticationService(networkConnector, monoClientMessageProcessor, Debug.Log);
         string username = "Peter";
         string password = "Jan";
-
+        Debug.Log("Logging in");
         await authenticationService.LoginAsync(username, password);
         //Klopt, change naar lobby
         scene.ChangeScene(Scenes.LOBBY);

@@ -1,4 +1,5 @@
-﻿using BattleTanks.Client;
+﻿using Assets.Scripts.Services;
+using BattleTanks.Client;
 using BattleTanks.MessageSerializer;
 using BattleTanks.Networking;
 using System.Collections;
@@ -10,8 +11,8 @@ public class PersistentClass : MonoBehaviour
 {
     private const int Port = 9999;
     private const string Host = "localhost";
-    public ClientMessageProcessor clientMessageSingleton { get; private set; }
-    public TcpNetworkConnector TcpNetworkConnector { get; private set; }
+    public static ClientMessageProcessor clientMessageSingleton { get; private set; }
+    public static MonoV2TcpNetworkConnector TcpNetworkConnector { get; private set; }
 
     private static PersistentClass persistentClass;
 
@@ -20,27 +21,26 @@ public class PersistentClass : MonoBehaviour
         return persistentClass;
     }
     // Start is called before the first frame update
-    //void Start()
-    //{
-    //    DontDestroyOnLoad(this.gameObject);
-    //}
-
     private void Awake()
     {
+        Debug.Log("Awoke Persistent Class");
         if (persistentClass != null && persistentClass != this)
         {
+            Debug.Log("Persistent Class already existed");
             Destroy(this.gameObject);
         }
         else
         {
+
+            Debug.Log("Persistent Class: Created instances of objects and Started connector");
             persistentClass = this;
 
             clientMessageSingleton = new ClientMessageProcessor();
-            TcpNetworkConnector = new TcpNetworkConnector(new MessagePackMessageSerializer(), clientMessageSingleton, Host, Port);
+            //TcpNetworkConnector = new TcpNetworkConnector(new MessagePackMessageSerializer(), clientMessageSingleton, Host, Port);
+            TcpNetworkConnector = new MonoV2TcpNetworkConnector(new JsonMessageSerializer(), clientMessageSingleton);
 
-            TcpNetworkConnector.ConnectAsync(CancellationToken.None).GetAwaiter().GetResult();
+            TcpNetworkConnector.Connect();
             TcpNetworkConnector.Start();
-            Debug.Log(TcpNetworkConnector.IsConnected);
         }
     }
 }
