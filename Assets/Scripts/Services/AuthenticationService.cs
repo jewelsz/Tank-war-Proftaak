@@ -27,4 +27,15 @@ public class AuthenticationService
         loginResponseListener.Unsubscribe();
         return loginResponse;
     }
+
+    public async Task<RegisterResponse> RegisterAsync(string email, string username, string password)
+    {
+        MessageListener<RegisterResponse> registerResponseListener = new MessageListener<RegisterResponse>();
+        registerResponseListener.Subscribe(_messageProcessor);
+        RegisterRequest registerRequest = new RegisterRequest(Guid.NewGuid(), email, username, password);
+        await _networkConnector.SendMessageAsync(registerRequest, CancellationToken.None);
+        RegisterResponse registerResponse = await registerResponseListener.ReceiveMessageAsync();
+        registerResponseListener.Unsubscribe();
+        return registerResponse;
+    }
 }

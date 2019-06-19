@@ -19,14 +19,14 @@ public class LoginUIController : MonoBehaviour
     [SerializeField] private InputField passwordInputField;
     private LoginResponse loginResponse;
 
-    public void Login()
-    {       
-        Debug.Log("Logging in");
-        AuthenticationService authenticationService = new AuthenticationService(networkConnector, monoClientMessageProcessor);
+    public async void LoginClicked()
+    {   
+        
         string username = usernameInputField.text;
         string password = passwordInputField.text;
 
-        loginResponse = authenticationService.LoginAsync(username, password).GetAwaiter().GetResult();
+        loginResponse = await LoginAsync();
+
         Debug.Log("Loginresponse :" + loginResponse.IsSuccess);
         //Klopt, change naar lobby
         scene.ChangeScene(Scenes.LOBBY);
@@ -35,6 +35,13 @@ public class LoginUIController : MonoBehaviour
         //failMessageBox.SetActive(true);
 
     }
+
+    private async Task<LoginResponse> LoginAsync()
+    {
+        AuthenticationService authenticationService = new AuthenticationService(networkConnector, monoClientMessageProcessor);
+        return await authenticationService.LoginAsync(usernameInputField.text, passwordInputField.text);
+    }
+
     public void failMessageOk()
     {
         failMessageBox.SetActive(false);

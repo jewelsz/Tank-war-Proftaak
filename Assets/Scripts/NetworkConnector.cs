@@ -7,16 +7,16 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 
-public class PersistentClass : MonoBehaviour
+public class NetworkConnector : MonoBehaviour
 {
     private const int Port = 9999;
     private const string Host = "localhost";
     public static ClientMessageProcessor clientMessageSingleton { get; private set; }
     public static MonoV2TcpNetworkConnector TcpNetworkConnector { get; private set; }
 
-    private static PersistentClass persistentClass;
+    private static NetworkConnector persistentClass;
 
-    public static PersistentClass GetInstance()
+    public static NetworkConnector GetInstance()
     {
         return persistentClass;
     }
@@ -31,7 +31,7 @@ public class PersistentClass : MonoBehaviour
         }
         else
         {
-
+            DontDestroyOnLoad(this.gameObject);
             Debug.Log("Persistent Class: Created instances of objects and Started connector");
             persistentClass = this;
 

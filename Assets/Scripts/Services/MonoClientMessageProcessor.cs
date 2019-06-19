@@ -15,7 +15,7 @@ namespace Assets.Scripts.Services
         public void Start()
         {
             Debug.Log("Awoke MonoClientMessageProcess");
-            clientMessageProcessor = PersistentClass.clientMessageSingleton;
+            clientMessageProcessor = NetworkConnector.clientMessageSingleton;
         }
 
         public Task ProcessCommand(Type type, ICommand command, INetworkConnector networkConnector)

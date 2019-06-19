@@ -13,7 +13,7 @@ namespace Assets.Scripts.Services
         public void Start()
         {
             Debug.Log("Awoke MonoTcpNetworkConnector");
-            tcpNetworkConnector = PersistentClass.TcpNetworkConnector;
+            tcpNetworkConnector = NetworkConnector.TcpNetworkConnector;
         }
 
         public bool IsConnected => ((INetworkConnector)tcpNetworkConnector).IsConnected;
