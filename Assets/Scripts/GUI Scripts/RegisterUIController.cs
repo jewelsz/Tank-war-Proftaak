@@ -17,14 +17,13 @@ public class RegisterUIController : MonoBehaviour
     [SerializeField] InputField confirmPasswordText;
 
     private GameObject networkManager;
-    private MonoTcpNetworkConnector networkConnector;
+    private MonoTcpNetworkConnector tcpNetworkConnector;
     private MonoClientMessageProcessor monoClientMessageProcessor;
-
 
     public void Start()
     {
         networkManager = GameObject.Find("NetworkManager");
-        networkConnector = networkManager.GetComponent<MonoTcpNetworkConnector>();
+        tcpNetworkConnector = networkManager.GetComponent<MonoTcpNetworkConnector>();
         monoClientMessageProcessor = networkManager.GetComponent<MonoClientMessageProcessor>();
     }
 
@@ -38,7 +37,7 @@ public class RegisterUIController : MonoBehaviour
 
     private async Task<RegisterResponse> RegisterAsync()
     {
-        AuthenticationService authenticationService = new AuthenticationService(networkConnector, monoClientMessageProcessor);
+        AuthenticationService authenticationService = new AuthenticationService(tcpNetworkConnector, monoClientMessageProcessor);
         return await authenticationService.RegisterAsync(emailText.text, usernameText.text, passwordText.text);
     }
 

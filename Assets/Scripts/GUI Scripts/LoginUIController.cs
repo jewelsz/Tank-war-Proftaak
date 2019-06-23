@@ -13,51 +13,52 @@ public class LoginUIController : MonoBehaviour
     [SerializeField] private GameObject failMessageBox;
     [SerializeField] private GameObject quitMessageBox;
     [SerializeField] private SceneHandler scene;
-    [SerializeField] private MonoTcpNetworkConnector networkConnector;
+    [SerializeField] private MonoTcpNetworkConnector tcpNetworkConnector;
     [SerializeField] private MonoClientMessageProcessor monoClientMessageProcessor;
     [SerializeField] private InputField usernameInputField;
     [SerializeField] private InputField passwordInputField;
     private LoginResponse loginResponse;
 
     public async void LoginClicked()
-    {   
-        
+    {     
         string username = usernameInputField.text;
         string password = passwordInputField.text;
 
         loginResponse = await LoginAsync();
+        if (!loginResponse.IsSuccess)
+        {
+            LoginFail();
+            return;
+        }
 
-        Debug.Log("Loginresponse :" + loginResponse.IsSuccess);
-        //Klopt, change naar lobby
-        scene.ChangeScene(Scenes.LOBBY);
+        GameObject networkManager = GameObject.Find("NetworkManager");
+        networkManager.GetComponent<UserLobbyObject>().SetLoggedInUser(loginResponse.UserDto);
 
-        //Fail
-        //failMessageBox.SetActive(true);
-
+        scene.ChangeScene(Scenes.LOBBYLIST);
     }
 
     private async Task<LoginResponse> LoginAsync()
     {
-        AuthenticationService authenticationService = new AuthenticationService(networkConnector, monoClientMessageProcessor);
+        AuthenticationService authenticationService = new AuthenticationService(tcpNetworkConnector, monoClientMessageProcessor);
         return await authenticationService.LoginAsync(usernameInputField.text, passwordInputField.text);
     }
 
-    public void failMessageOk()
+    public void FailMessageOk()
     {
         failMessageBox.SetActive(false);
     }
 
-    public void loginFail()
+    public void LoginFail()
     {
         failMessageBox.SetActive(true);
     }
 
-    public void disableMessagebox()
+    public void DisableMessagebox()
     {
         failMessageBox.SetActive(false);
     }
     
-    public void goToRegister()
+    public void GoToRegister()
     {
         scene.ChangeScene(Scenes.REGISTER);
     }

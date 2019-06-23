@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\Enums\ShotType.cs" />
     <Compile Include="Assets\Scripts\Game Scripts\Game.cs" />
     <Compile Include="Assets\Scripts\Game Scripts\SpawnPoint.cs" />
+    <Compile Include="Assets\Scripts\GUI Scripts\LobbyListUIController.cs" />
     <Compile Include="Assets\Scripts\GUI Scripts\LobbyUIController.cs" />
     <Compile Include="Assets\Scripts\GUI Scripts\LoginUIController.cs" />
     <Compile Include="Assets\Scripts\GUI Scripts\RegisterUIController.cs" />
@@ -80,6 +81,8 @@
     <Compile Include="Assets\Scripts\Models\User.cs" />
     <Compile Include="Assets\Scripts\NetworkConnector.cs" />
     <Compile Include="Assets\Scripts\Services\AuthenticationService.cs" />
+    <Compile Include="Assets\Scripts\Services\GameService.cs" />
+    <Compile Include="Assets\Scripts\Services\LobbyService.cs" />
     <Compile Include="Assets\Scripts\Services\MonoClientMessageProcessor.cs" />
     <Compile Include="Assets\Scripts\Services\MonoTcpNetworkConnector.cs" />
     <Compile Include="Assets\Scripts\Services\MonoV2TcpNetworkConnector.cs" />
@@ -90,6 +93,7 @@
     <Compile Include="Assets\Scripts\Tank Scripts\Shooting.cs" />
     <Compile Include="Assets\Scripts\Tank Scripts\TankManagement.cs" />
     <Compile Include="Assets\Scripts\Tank Scripts\TankMovement.cs" />
+    <Compile Include="Assets\Scripts\UserLobbyObject.cs" />
     <Reference Include="Unity.PackageManagerUI.Editor">
       <HintPath>E:/Git/Tank-war-Proftaak/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>

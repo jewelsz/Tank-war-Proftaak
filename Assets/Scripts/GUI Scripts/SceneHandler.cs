@@ -30,7 +30,9 @@ public class SceneHandler : MonoBehaviour
             case Scenes.LOBBY:
                 SceneManager.LoadScene("LobbyScene", LoadSceneMode.Single);
                 break;
-
+            case Scenes.LOBBYLIST:
+                SceneManager.LoadScene("LobbyListScene", LoadSceneMode.Single);
+                break;
             case Scenes.REGISTER:
                 SceneManager.LoadScene("RegisterScene", LoadSceneMode.Single);
                 break;

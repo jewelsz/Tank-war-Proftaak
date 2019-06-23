@@ -7,12 +7,12 @@ public class LobbyUIController : MonoBehaviour
 {
     [SerializeField] private SceneHandler scene;
 
-    public void startGame()
+    public void StartGame()
     {
         scene.ChangeScene(Scenes.GAME);
     }
 
-    public void backToLogin()
+    public void BackToLogin()
     {
         scene.ChangeScene(Scenes.LOGIN);
     }

@@ -273,7 +273,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1111575716}
-        m_MethodName: goToRegister
+        m_MethodName: GoToRegister
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1678,7 +1678,7 @@ MonoBehaviour:
   failMessageBox: {fileID: 656145634}
   quitMessageBox: {fileID: 717845368}
   scene: {fileID: 1111575717}
-  networkConnector: {fileID: 1789949192}
+  tcpNetworkConnector: {fileID: 1789949192}
   monoClientMessageProcessor: {fileID: 1789949190}
   usernameInputField: {fileID: 561099429}
   passwordInputField: {fileID: 1036229701}
@@ -2250,6 +2250,7 @@ GameObject:
   - component: {fileID: 1789949192}
   - component: {fileID: 1789949191}
   - component: {fileID: 1789949190}
+  - component: {fileID: 1789949194}
   m_Layer: 0
   m_Name: NetworkManager
   m_TagString: Untagged
@@ -2307,6 +2308,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1789949194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789949189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c9b763f64befcd4fafd8219cf5a7f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1806968503
 GameObject:
   m_ObjectHideFlags: 0
@@ -2592,7 +2605,7 @@ PrefabInstance:
     - target: {fileID: 4580749953752291779, guid: 45a35e7f7b8586543a68fccd12e7b001,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: loginFail
+      value: LoginFail
       objectReference: {fileID: 0}
     - target: {fileID: 4580749954708505414, guid: 45a35e7f7b8586543a68fccd12e7b001,
         type: 3}
@@ -2767,7 +2780,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1111575716}
-        m_MethodName: failMessageOk
+        m_MethodName: FailMessageOk
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

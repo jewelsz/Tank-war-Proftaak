@@ -9,6 +9,7 @@ namespace Assets.Scripts.Enums
     public enum Scenes
     {
         LOGIN,
+        LOBBYLIST,
         LOBBY,
         GAME,
         REGISTER
