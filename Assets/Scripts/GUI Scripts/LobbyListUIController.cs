@@ -2,8 +2,6 @@
 using Assets.Scripts.Services;
 using BattleTanks.Messages.Dtos;
 using BattleTanks.Messages.Responses;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -23,7 +21,6 @@ public class LobbyListUIController : MonoBehaviour
     public void Awake()
     {
         networkManager = GameObject.Find("NetworkManager");
-        NetworkConnector network = networkManager.GetComponent<NetworkConnector>();
        
         networkConnector = networkManager.GetComponent<MonoTcpNetworkConnector>();
         monoClientMessageProcessor = networkManager.GetComponent<MonoClientMessageProcessor>();
@@ -64,6 +61,5 @@ public class LobbyListUIController : MonoBehaviour
             networkManager.GetComponent<UserLobbyObject>().SetJoinedLobby(joinLobbyResponse.LobbyDto);
             scene.ChangeScene(Scenes.LOBBY);
         }
-
     }
 }

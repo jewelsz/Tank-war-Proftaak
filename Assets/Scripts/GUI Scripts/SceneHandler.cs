@@ -10,10 +10,6 @@ public class SceneHandler : MonoBehaviour
     public PlayerColor playerColor { get; set; }
     [SerializeField] Dropdown ColorDropdown;
 
-    private void Start()
-    {
-        DontDestroyOnLoad(this);
-    }
 
     public void ChangeScene(Scenes scene)
     {

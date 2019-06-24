@@ -369,6 +369,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4580749953752291779, guid: 45a35e7f7b8586543a68fccd12e7b001,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1695355712}
+    - target: {fileID: 4580749953752291779, guid: 45a35e7f7b8586543a68fccd12e7b001,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GetAllLobbies
+      objectReference: {fileID: 0}
     - target: {fileID: 4580749954708505414, guid: 45a35e7f7b8586543a68fccd12e7b001,
         type: 3}
       propertyPath: m_Text
@@ -417,7 +427,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0000056282647, y: -0.00002153619}
+  m_AnchoredPosition: {x: 0.0000056282647, y: -0.00002233617}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &39853024
@@ -2261,7 +2271,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 648978925}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.9999999
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

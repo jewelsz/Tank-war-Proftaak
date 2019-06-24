@@ -1,4 +1,10 @@
 ﻿using Assets.Scripts.Enums;
+using Assets.Scripts.Services;
+using BattleTanks.Messages;
+using BattleTanks.Messages.Dtos;
+using BattleTanks.Messages.Events;
+using BattleTanks.Networking.Interfaces;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,33 +19,45 @@ public class TankManagement : MonoBehaviour
     GameObject playerTank;
     [SerializeField]
     GameObject bulletPrefab;
-
+    private UserLobbyObject userLobbyObject;
+    private GameObject networkManager;
+    private IMessageProcessor messageProcessor;
+    private INetworkConnector networkConnector;
+    private GameService gameService;
     private void Start()
     {
-        //PlayerColor testColor;
-        //SceneHandler sceneHandler = GameObject.FindGameObjectWithTag("Color Select").GetComponent<SceneHandler>();
-        //testColor = sceneHandler.playerColor;
-        //Debug.Log(testColor);
+        networkManager = GameObject.Find("NetworkManager");
 
-        Color = PlayerColor.RED;
-        setPlayerGameObject();
+        networkConnector = networkManager.GetComponent<MonoTcpNetworkConnector>();
+        messageProcessor = networkManager.GetComponent<MonoClientMessageProcessor>();
+        userLobbyObject = networkManager.GetComponent<UserLobbyObject>();
+
+        int number = userLobbyObject.GetJoinedLobby().Users.FindIndex(x => x.Name == userLobbyObject.GetLoggedInUser().Name);
+        gameService = new GameService(networkConnector, messageProcessor, userLobbyObject);
+        setPlayerGameObject(number);
+
         setPlayerScripts();
     }
 
-    private void setPlayerGameObject()
+    public void Update()
     {
-        switch (Color)
+        MovementToServerAsync();
+        MovementToServerAsync();
+    }
+    private void setPlayerGameObject(int playerNum)
+    {
+        switch (playerNum)
         {
-            case PlayerColor.RED:
+            case 0:
                 playerTank = redTank;
                 break;
-            case PlayerColor.BLUE:
+            case 1:
                 playerTank = blueTank;
                 break;
-            case PlayerColor.YELLOW:
+            case 2:
                 playerTank = yellowTank;
                 break;
-            case PlayerColor.GREEN:
+            case 3:
                 playerTank = greenTank;
                 break;
         }
@@ -71,8 +89,32 @@ public class TankManagement : MonoBehaviour
 
     }
 
-    public void movementFromServer(PlayerColor color, Vector3 movement)
+    public async void MovementToServerAsync()
     {
+        BattleTanks.Domain.Entities.Tank tank = new BattleTanks.Domain.Entities.Tank(userLobbyObject.GetLoggedInUser().Id, (int)Math.Round(playerTank.transform.position.x), (int)Math.Round(playerTank.transform.position.y), (int)Math.Round(playerTank.transform.position.z), (int)Math.Round(playerTank.transform.rotation.x), (int)Math.Round(playerTank.transform.position.y));
+        
+        await gameService.MoveTankAsync(tank);
+    }
+    public async void MovementFromServerAsync()
+    {
+        TankMovementEvent tankMovementEvent = await gameService.ReceiveMoveEventAsync();
+        
 
+        int number = userLobbyObject.GetJoinedLobby().Users.FindIndex(x => x.Id == tankMovementEvent.Tank.PlayerId);
+        
+        switch(number){
+            case 0:
+                redTank.transform.position = new Vector3(tankMovementEvent.Tank.XPosition, tankMovementEvent.Tank.YPosition, tankMovementEvent.Tank.ZPosition);
+                break;
+            case 1:
+                blueTank.transform.position = new Vector3(tankMovementEvent.Tank.XPosition, tankMovementEvent.Tank.YPosition, tankMovementEvent.Tank.ZPosition);
+                break;
+            case 2:
+                yellowTank.transform.position = new Vector3(tankMovementEvent.Tank.XPosition, tankMovementEvent.Tank.YPosition, tankMovementEvent.Tank.ZPosition);
+                break;
+            case 3:
+                greenTank.transform.position = new Vector3(tankMovementEvent.Tank.XPosition, tankMovementEvent.Tank.YPosition, tankMovementEvent.Tank.ZPosition);
+                break;
+        }
     }
 }

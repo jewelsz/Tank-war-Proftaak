@@ -15,7 +15,7 @@ public class LobbyService
     private IMessageProcessor _messageProcessor;
     private INetworkConnector _networkConnector;
     private UserDto _loggedInUser;
-    // Start is called before the first frame update
+
     public LobbyService(INetworkConnector networkConnector, IMessageProcessor messageProcessor, UserDto loggedInUser)
     {
         _messageProcessor = messageProcessor;

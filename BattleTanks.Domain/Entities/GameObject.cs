@@ -7,13 +7,13 @@ namespace BattleTanks.Domain.Entities
     public class GameObject
     {
         public int PlayerId { get; }
-        public int XPosition { get; set; }
-        public int YPosition { get; set; }
-        public int ZPosition { get; set; }
-        public int XRotation { get; set; }
-        public int ZRotation { get; set; }
+        public float XPosition { get; set; }
+        public float YPosition { get; set; }
+        public float ZPosition { get; set; }
+        public float XRotation { get; set; }
+        public float ZRotation { get; set; }
 
-        public GameObject(int playerId, int posX, int posY, int posZ, int rotX, int rotZ)
+        public GameObject(int playerId, float posX, float posY, float posZ, float rotX, float rotZ)
         {
             PlayerId = playerId;
             XPosition = posX;
